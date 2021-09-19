@@ -1,0 +1,261 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.user {
+  min-height: 90vh;
+
+  @include respond(iphoneXSMaxLandscape) {
+    padding-bottom: 2rem;
+  }
+
+  @include respond(phone-landscape) {
+    padding-bottom: 2rem;
+  }
+}
+
+.user__container {
+  padding-top: 10rem;
+  min-height: 90vh;
+  max-width: 136.6rem;
+  margin: auto;
+
+  @include respond(macbook) {
+    max-width: 95%;
+  }
+
+  @include respond(ipad-pro) {
+    padding-top: 20rem;
+  }
+
+  @include respond(tablet) {
+    padding-top: 15rem;
+  }
+
+  @include respond(small-phone) {
+    padding-top: 10rem;
+  }
+
+  & > h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+
+    @include respond(laptop-medium) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 1.8rem;
+    }
+  }
+
+  & > h1:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .user__image__container {
+    width: 30rem;
+    margin: auto;
+    margin-bottom: 2rem;
+
+    @include respond(laptop-medium) {
+      max-width: 25rem;
+    }
+
+    @include respond(phone) {
+      width: 20rem;
+    }
+
+    @include respond(small-phone) {
+      width: 15rem;
+    }
+  }
+}
+
+.user__avatar {
+  width: 30rem !important;
+  height: 30rem !important;
+  margin-bottom: 1rem;
+
+  @include respond(laptop-medium) {
+    width: 25rem !important;
+    height: 25rem !important;
+  }
+
+  @include respond(phone) {
+    width: 20rem !important;
+    height: 20rem !important;
+  }
+
+  @include respond(small-phone) {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+}
+.user__button {
+  display: block;
+  margin: auto;
+  border-radius: 20rem;
+  background-color: $red;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+
+  @include respond(phone) {
+    font-size: 1.3rem;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: lighten($red, 5);
+  }
+}
+
+.user__update__button {
+  margin: 2rem auto;
+}
+
+.user__update__form {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+
+.user__update__form__input {
+  background-color: transparent;
+  border: 2px solid rgba($text, 0.4);
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  caret-color: $text;
+  font-size: 1.4rem;
+  width: 100%;
+  color: $text;
+  font-family: inherit;
+  margin-bottom: 1rem;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $red;
+  }
+
+  &::placeholder {
+    color: $grey;
+  }
+}
+
+.user__update__form__input:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.user__update__form__button {
+  font-family: inherit;
+  font-size: 1.4rem;
+  background-color: #d7dcdf;
+  padding: 1rem 1.2rem;
+  border-radius: 20rem;
+  border: none;
+  color: #111;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.messages {
+  max-width: 70rem;
+}
+
+.user__image__fileInput {
+  display: none;
+}
+
+.user__image__fileInput__label {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: auto;
+  cursor: pointer;
+  background-color: #e4e6eb;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: 0.2s ease-out;
+  &:hover {
+    background-color: darken(#e4e6eb, 5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.user__change__avatar {
+  margin: auto;
+
+  & > p {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+.user__change__avatar__button {
+  text-align: center;
+  border: none;
+  font-size: 1.5rem;
+  margin: auto;
+  cursor: pointer;
+  background-color: #e4e6eb;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: 0.2s ease-out;
+  font-family: inherit;
+  width: 45%;
+
+  &:hover {
+    background-color: darken(#e4e6eb, 5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.user__change__avatar__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.user__change__avatar__submitbutton {
+  background-color: #2ecc71;
+
+  &:hover {
+    background-color: darken(#2ecc71, 5);
+  }
+}
+
+.user__change__avatar__cancelbutton {
+  background-color: #c0392b;
+
+  &:hover {
+    background-color: darken(#c0392b, 5);
+  }
+}

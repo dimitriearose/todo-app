@@ -1,0 +1,133 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.security {
+  background-color: #fff;
+  padding: 6rem 0;
+}
+
+.security__container {
+  max-width: 136.6rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include respond(ipad-pro) {
+    max-width: 95%;
+  }
+
+  @include respond(iphoneXSMaxLandscape) {
+    flex-direction: column;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.security__left {
+  width: 50%;
+
+  @include respond(tablet) {
+    width: 45%;
+  }
+  @include respond(iphoneXSMaxLandscape) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 95%;
+  }
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 95%;
+  }
+
+  & > h4 {
+    font-size: 3rem;
+    color: $text;
+    margin-bottom: 1rem;
+
+    @include respond(tablet) {
+      font-size: 2.5rem;
+    }
+    @include respond(iphoneXSMaxLandscape) {
+      text-align: center;
+    }
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  & > p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @include respond(iphoneXSMaxLandscape) {
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  & > a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 40rem;
+    display: flex;
+    align-items: center;
+    color: $red;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+  }
+}
+.security__icon {
+  font-size: 2rem !important;
+  color: $text;
+}
+.security__right {
+  @include respond(tablet) {
+    width: 45%;
+  }
+
+  @include respond(iphoneXSMaxLandscape) {
+    width: 95%;
+  }
+
+  @include respond(phone) {
+    width: 95%;
+  }
+}
+.security__right__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid rgba($text, 0.2);
+  padding: 0.5rem 0;
+
+  & > p {
+    font-size: 1.5rem;
+    color: $text;
+
+    @include respond(tablet) {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.security__right__row:last-of-type {
+  border-bottom: 1px solid rgba($text, 0.2);
+}
+
+.security__right__row__check {
+  font-size: 2rem !important;
+  margin-right: 1rem;
+  color: rgba($text, 0.7);
+}

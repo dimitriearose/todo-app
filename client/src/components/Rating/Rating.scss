@@ -1,0 +1,48 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.rating {
+  min-width: 15rem;
+  max-width: 42rem;
+  padding: 1.2rem;
+  background-color: #edf2f7;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  @include respond(tablet) {
+    min-width: 10rem;
+    max-width: 35rem;
+    margin-bottom: 2rem;
+  }
+
+  @include respond(small-ipad) {
+    min-width: 10rem;
+    max-width: 32rem;
+    margin-bottom: 2rem;
+    height: 10.5rem;
+  }
+}
+.rating__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  & > h6 {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    font-weight: 500;
+  }
+}
+
+.rating__avatar {
+  margin-right: 1rem;
+}
+
+.rating__bottom {
+  & > p {
+    font-size: 1.25rem;
+  }
+}

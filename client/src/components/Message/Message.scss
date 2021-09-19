@@ -1,0 +1,10 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.message {
+  font-size: 1.4rem;
+  padding: 1.4rem;
+  color: $text;
+  width: 100%;
+  margin: 1rem auto 2rem auto;
+}

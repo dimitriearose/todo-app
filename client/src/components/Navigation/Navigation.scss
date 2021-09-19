@@ -1,0 +1,100 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__scrolled {
+    background-color: #fff;
+    box-shadow: 1px 1px 8px rgba($black, 0.2);
+  }
+
+  &__container {
+    padding: 2rem 4rem;
+    max-width: 1336px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      padding: 2rem 2rem;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    @include respond(small-ipad) {
+      display: none;
+    }
+
+    & > li {
+      font-size: 1.5rem;
+      color: #1c1e21;
+      margin-right: 2.5rem;
+
+      @include respond(phone) {
+        font-size: 1.3rem;
+        margin-right: 1.5rem;
+      }
+
+      & > a {
+        color: #1c1e21;
+        text-decoration: none;
+        padding-bottom: 0.1rem;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    & > li:last-of-type {
+      margin-right: 0rem;
+    }
+  }
+}
+.active {
+  border-bottom: 0.2rem solid red !important;
+}
+
+.navbar__container__link {
+  text-decoration: none;
+
+  & > h4 {
+    color: #1c1e21;
+    font-size: 2rem;
+  }
+}
+
+.navbar__list__button {
+  border: none;
+  background-color: rgba($black, 0.1);
+  color: #1c1e21;
+  padding: 1rem 1.2rem;
+  border-radius: 50rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.1s ease-in;
+  text-decoration: none;
+
+  @include respond(small-ipad) {
+    display: none;
+  }
+}
+
+.navbar__list__menu {
+  display: none !important;
+  font-size: 2.5rem !important;
+
+  @include respond(small-ipad) {
+    display: block !important;
+  }
+}

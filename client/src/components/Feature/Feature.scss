@@ -1,0 +1,53 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+
+  @include respond(phone-landscape) {
+    margin-bottom: 2rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 3rem;
+  }
+
+  & > h5 {
+    font-size: 1.8rem;
+    color: $text;
+    margin-bottom: 0.3rem;
+
+    @include respond(small-ipad) {
+      font-size: 1.5rem;
+    }
+  }
+
+  & > p {
+    font-size: 1.4rem;
+    color: $grey;
+
+    @include respond(small-ipad) {
+      font-size: 1.3rem;
+    }
+  }
+}
+.feature__icon {
+  font-size: 3.5rem !important;
+  color: $red;
+  margin-bottom: 1rem;
+}
+.feature__description {
+  text-align: center;
+}
+
+.feature__plan {
+  margin-bottom: 3rem;
+}
+
+.feature:last-of-type {
+  margin-bottom: 0;
+}

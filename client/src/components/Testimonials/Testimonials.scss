@@ -1,0 +1,74 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.testimonials {
+  min-height: 30vh;
+
+  @include respond(iphoneXSMaxLandscape) {
+    padding: 2rem 0;
+  }
+}
+
+.testimonials__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 136.6rem;
+  margin: auto;
+  min-height: 30vh;
+
+  @include respond(ipad-pro) {
+    max-width: 95%;
+  }
+}
+
+.testimonials__row {
+  max-width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonials__row:last-of-type {
+  margin-bottom: 0;
+}
+
+.testimonials__row__icon {
+  font-size: 6rem !important;
+  color: #4d4d4c;
+  margin-right: 15rem;
+
+  @include respond(tablet) {
+    margin-right: 10rem;
+  }
+
+  @include respond(iphoneXSMaxLandscape) {
+    margin-right: 10rem;
+    font-size: 5rem !important;
+  }
+
+  @include respond(small-ipad) {
+    margin-right: 8rem;
+    font-size: 5rem !important;
+  }
+
+  @include respond(phone) {
+    margin-right: 4rem;
+    font-size: 3.5rem !important;
+  }
+
+  @include respond(small-phone) {
+    margin-right: 3rem;
+    font-size: 3.2rem !important;
+  }
+
+  @include respond(iphone-5s) {
+    font-size: 3rem !important;
+    margin-right: 2.8rem;
+  }
+}
+
+.testimonials__row__icon:last-of-type {
+  margin-right: 0;
+}

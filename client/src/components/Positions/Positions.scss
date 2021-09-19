@@ -1,0 +1,41 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.positions {
+  padding: 6rem 0;
+  padding-top: 10rem;
+  min-height: 100vh;
+
+  @include respond(phone-landscape) {
+    padding-top: 6rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 6rem;
+  }
+}
+
+.positions__container {
+  min-height: 100vh;
+  max-width: 1366px;
+  margin: auto;
+
+  @include respond(ipad-pro) {
+    max-width: 90%;
+  }
+
+  & > h4 {
+    text-align: center;
+    font-size: 4rem;
+    color: $text;
+    margin-bottom: 5rem;
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+    }
+
+    @include respond(iphone-5s) {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.looking {
+  min-height: 80vh;
+  padding: 6rem 0;
+  background-color: #f2f5f7;
+
+  @include respond(ipad-pro) {
+    min-height: 70vh;
+  }
+
+  @include respond(phone) {
+    padding-bottom: 3rem;
+  }
+}
+
+.looking__container {
+  min-height: 80vh;
+  margin: auto;
+  max-width: 1366px;
+
+  @include respond(ipad-pro) {
+    min-height: 70vh;
+  }
+
+  & > h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: $text;
+    margin-bottom: 4rem;
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+
+    @include respond(iphone-5s) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.looking__content {
+  margin-bottom: 8rem;
+
+  & > h4 {
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    @include respond(iphone-5s) {
+      font-size: 1.8rem;
+    }
+  }
+
+  & > p {
+    font-size: 1.6rem;
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+
+    @include respond(phone) {
+      max-width: 80%;
+    }
+
+    @include respond(iphone-5s) {
+      font-size: 1.5rem;
+    }
+  }
+}

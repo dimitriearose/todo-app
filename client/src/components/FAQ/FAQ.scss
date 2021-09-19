@@ -1,0 +1,27 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.faq {
+  background-color: $red;
+  padding: 4rem 0;
+}
+
+.faq__container {
+  max-width: 136.6rem;
+  margin: auto;
+
+  @include respond(laptop-medium) {
+    max-width: 90%;
+  }
+
+  & > h3 {
+    color: #e4e6eb;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+
+    @include respond(small-ipad) {
+      font-size: 3.5rem;
+    }
+  }
+}

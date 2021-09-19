@@ -1,0 +1,93 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.contact {
+  min-height: 100vh;
+
+  @include respond(ipad-pro) {
+    min-height: 70vh;
+  }
+
+  @include respond(tablet) {
+    min-height: 100vh;
+  }
+}
+
+.contact__container {
+  max-width: 1366px;
+  margin: auto;
+  padding-top: 14rem;
+
+  @include respond(macbook) {
+    max-width: 95%;
+  }
+
+  @include respond(laptop-medium) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include respond(ipad-pro) {
+    padding-top: 20rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 12rem;
+  }
+
+  & > h5 {
+    font-size: 3rem;
+    color: $text;
+    margin-bottom: 0.4rem;
+
+    @include respond(laptop-medium) {
+      text-align: center;
+    }
+  }
+
+  & > h4 {
+    font-size: 1.7rem;
+    color: $text;
+    margin-bottom: 1rem;
+
+    @include respond(laptop-medium) {
+      text-align: center;
+    }
+  }
+  & > p {
+    font-size: 1.5rem;
+    color: $text;
+    max-width: 60%;
+    margin-bottom: 1rem;
+
+    @include respond(laptop-medium) {
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      max-width: 80%;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.contact__image__container {
+  margin: auto;
+  width: 60rem;
+  margin-bottom: 4rem;
+
+  @include respond(laptop-medium) {
+    width: 40rem;
+  }
+
+  @include respond(phone) {
+    width: 75%;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}

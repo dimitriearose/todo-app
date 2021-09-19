@@ -1,0 +1,158 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.register {
+  min-height: 100vh;
+}
+
+.register__container {
+  padding-top: 14rem;
+  max-width: 136.6rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include respond(laptop-medium) {
+    max-width: 95%;
+  }
+
+  @include respond(ipad-pro) {
+    padding-top: 25rem;
+  }
+
+  @include respond(tablet) {
+    padding-top: 15rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 10rem;
+  }
+
+  & > h1 {
+    text-align: center;
+    color: $text;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  & > p {
+    text-align: center;
+    color: $text;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.register__form {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 40rem;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    align-items: center;
+    min-width: 90%;
+  }
+
+  & > button {
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 30%;
+    margin: auto;
+    border: none;
+    font-family: inherit;
+    color: #fff;
+    background-color: $red;
+    transition: 0.2s ease-in-out;
+    border-radius: 20rem;
+
+    &:hover {
+      background-color: lighten($red, 5);
+      color: #e4e6eb;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.register__form__field {
+  margin-bottom: 2rem;
+  position: relative;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  & > input {
+    background-color: transparent;
+    border: 2px solid rgba($text, 0.4);
+    padding: 1rem 1rem;
+    border-radius: 0.6rem;
+    caret-color: $text;
+    font-size: 1.5rem;
+    width: 100%;
+    color: $text;
+    font-family: inherit;
+
+    @include respond(phone) {
+      width: 100%;
+      margin: auto;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $grey;
+      font-weight: 500;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid rgba($text, 0.7);
+    }
+  }
+}
+
+.register__footer {
+  color: $text;
+
+  & > a {
+    color: $text;
+  }
+}
+
+.register__terms {
+  width: 50%;
+  margin: auto;
+  font-size: 1.2rem !important;
+  color: $grey !important;
+
+  @include respond(phone) {
+    width: 85%;
+  }
+
+  & > span {
+    text-decoration: underline;
+  }
+}
+
+.register__form__field__icon {
+  position: absolute;
+  color: $red;
+  font-size: 2.2rem !important;
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+  opacity: 0;
+}

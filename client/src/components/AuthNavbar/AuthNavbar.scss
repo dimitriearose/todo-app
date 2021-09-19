@@ -1,0 +1,41 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.authNavbar {
+  padding: 2rem;
+}
+
+.authNavbar__container {
+  max-width: 136.6rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(macbook) {
+    max-width: 95%;
+  }
+
+  & > h4 {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: $text;
+  }
+}
+
+.authNavbar__menu {
+  width: 3rem;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.authNavbar__menu__line {
+  height: 0.2rem;
+  background-color: $text;
+}
+.authNavbar__menu__lineOne {
+  margin-bottom: 0.4rem;
+  height: 0.22rem;
+}
+.authNavbar__menu__lineTwo {
+}

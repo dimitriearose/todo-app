@@ -1,0 +1,219 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.information {
+  padding: 4rem;
+  min-height: 30vh;
+  background-color: #fff;
+}
+
+.information__container {
+  max-width: 136.6rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 30vh;
+
+  @include respond(small-ipad) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include respond(small-ipad) {
+    max-width: 95%;
+  }
+}
+
+.information__left {
+  width: 40%;
+
+  @include respond(ipad-pro) {
+    width: 45%;
+  }
+
+  @include respond(small-ipad) {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 4rem;
+  }
+
+  @include respond(iphone-5s) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & > h4 {
+    font-size: 2rem;
+    color: #1c1e21;
+    margin-bottom: 1rem;
+
+    @include respond(small-phone) {
+      font-size: 1.7rem;
+    }
+    @include respond(iphone-5s) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  & > h6 {
+    font-size: 1.4rem;
+    color: #1c1e21;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    @include respond(small-phone) {
+      font-size: 1.3rem;
+    }
+
+    @include respond(iphone-5s) {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.information__right {
+  display: flex;
+  width: 40%;
+
+  @include respond(ipad-pro) {
+    width: 50%;
+  }
+
+  @include respond(small-ipad) {
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.information__right__card {
+  @include respond(phone) {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  & > h5 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #1c1e21;
+
+    @include respond(galaxy-fold) {
+      font-size: 1.3rem;
+    }
+  }
+
+  & > p {
+    font-size: 1.4rem;
+    max-width: 85%;
+    margin-bottom: 1.5rem;
+
+    @include respond(small-ipad) {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  & > button {
+    background-color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    padding-left: 0rem;
+    font-family: inherit;
+    color: #1c1e21;
+    font-weight: 500;
+    border-radius: 40rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+.information__right__card__icon {
+  color: $red;
+  font-size: 3.5rem !important;
+  margin-bottom: 1rem;
+}
+
+.information__left__button__container {
+  display: flex;
+
+  & > button {
+    background-color: $red;
+    border: none;
+    padding: 0.6rem 1rem;
+    padding-left: 1.3rem;
+    font-family: inherit;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 40rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.1s ease-in-out;
+
+    @include respond(small-phone) {
+      font-size: 1.3rem;
+    }
+
+    @include respond(iphone-5s) {
+      font-size: 1.1rem;
+    }
+
+    @include respond(galaxy-fold) {
+      font-size: 1rem;
+      padding: 0.5rem 0.7rem;
+    }
+
+    &:hover {
+      background-color: lighten($red, 5);
+    }
+  }
+
+  & > button:last-of-type {
+    background-color: #fff;
+    color: #1c1e21;
+
+    &:hover {
+      background-color: darken(#fff, 5);
+    }
+  }
+}
+
+.information__right__button__icon {
+  color: #fff;
+  margin-left: -2px;
+  font-size: 2rem !important;
+}
+
+.information__right__button__icon__right {
+  color: #1c1e21;
+}
+
+.information__right__button__icon__two {
+  color: #1c1e21;
+}
+
+.information__right__card:last-of-type {
+  margin-bottom: 0;
+}

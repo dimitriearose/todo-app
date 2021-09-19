@@ -1,0 +1,281 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.home {
+  min-height: 100vh;
+  background-color: #fff;
+
+  &__icon {
+    color: $white !important;
+    font-size: 5rem !important;
+    margin-bottom: 3rem;
+  }
+  &__content {
+    padding-top: 18rem;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 50%;
+
+    @include respond(ipad-pro) {
+      align-items: center;
+      padding-top: 15rem;
+    }
+
+    @include respond(tablet-medium-landscape) {
+      padding-top: 8rem;
+    }
+
+    @include respond(iphoneXSMaxLandscape) {
+      padding-top: 2rem;
+    }
+
+    @include respond(ipad-pro) {
+      padding-top: 10rem;
+    }
+
+    @include respond(small-ipad) {
+      align-items: center;
+      padding-top: 4rem;
+    }
+
+    @include respond(phone-landscape) {
+      padding-top: 2rem;
+    }
+
+    @include respond(phone) {
+      padding-top: 2rem;
+      max-width: 90%;
+    }
+
+    & > h1 {
+      color: #1c1e21;
+      font-size: 8rem;
+      font-weight: 700;
+      text-align: left;
+      line-height: 1.1;
+
+      @include respond(laptop-medium) {
+        font-size: 6rem;
+      }
+
+      @include respond(tablet-medium-landscape) {
+        font-size: 6rem;
+      }
+
+      @include respond(iphoneXSMaxLandscape) {
+        font-size: 4rem;
+      }
+
+      @include respond(small-ipad) {
+        font-size: 5rem;
+      }
+
+      @include respond(phone-landscape) {
+        font-size: 4rem;
+      }
+
+      @include respond(phone) {
+        text-align: center;
+        font-size: 4rem;
+      }
+
+      @include respond(small-phone) {
+        margin: auto;
+        text-align: center;
+        font-size: 3rem;
+      }
+    }
+
+    & > p {
+      color: #1c1e21;
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-align: left;
+      margin-bottom: 0.5rem;
+
+      @include respond(laptop-medium) {
+        font-size: 1.4rem;
+      }
+
+      @include respond(tablet-medium-landscape) {
+        font-size: 1.3rem;
+      }
+
+      @include respond(ipad-pro) {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      @include respond(iphoneXSMaxLandscape) {
+        font-size: 1.2rem;
+      }
+
+      @include respond(small-ipad) {
+        margin-top: 1rem;
+      }
+
+      @include respond(phone-landscape) {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        font-size: 1.3rem;
+      }
+    }
+
+    & > a {
+      text-decoration: none !important;
+    }
+
+    & > p:last-of-type {
+      line-height: 1.5;
+      margin-bottom: 2rem;
+
+      @include respond(ipad-pro) {
+        margin-bottom: 3rem;
+      }
+      @include respond(small-ipad) {
+        margin-top: 0rem;
+      }
+      @include respond(phone) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__button {
+    font-size: 1.6rem;
+    background-color: #c0392b;
+    margin-top: 2.5rem;
+    color: #e4e6eb;
+    font-family: inherit;
+    padding: 0.6rem 2.5rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 50rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+
+    @include respond(phone-landscape) {
+      font-size: 1.3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      background-color: lighten(#c0392b, 5);
+    }
+
+    &:active {
+      transform: translateY(0.8px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.home__container {
+  max-width: 136.6rem;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include respond(laptop-medium) {
+    max-width: 95%;
+  }
+
+  @include respond(ipad-pro) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.home__next__page__icon {
+  color: #1c1e21;
+  font-size: 2.5rem !important;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.home__link__next__page__container {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  margin: auto;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.home__image {
+  height: 40rem;
+  transform: translate(0, 10rem);
+
+  @include respond(iphoneXSMaxLandscape) {
+    height: 25rem;
+    transform: translate(0, 6rem);
+  }
+
+  @include respond(small-ipad) {
+    height: 35rem;
+    transform: translate(0, 10rem);
+  }
+
+  @include respond(phone-landscape) {
+    height: 25rem;
+    transform: translate(0, 6rem);
+  }
+
+  @include respond(phone) {
+    height: 22rem;
+    transform: translate(0, 5rem);
+  }
+
+  @include respond(small-phone) {
+    height: 15rem;
+    transform: translate(0, 5rem);
+  }
+
+  @include respond(iphone-5s) {
+    display: none;
+  }
+
+  & > img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.home__button__two {
+  margin-left: 1rem;
+  background-color: #fff;
+  color: #1c1e21;
+
+  &:hover {
+    background-color: darken(#fff, 10);
+    color: #1c1e21;
+  }
+}
+
+::selection {
+  background-color: $red;
+}

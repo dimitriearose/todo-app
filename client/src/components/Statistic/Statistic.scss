@@ -1,0 +1,41 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.statistic {
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  padding: 2rem;
+  background-color: #f2f5f7;
+
+  @include respond(iphoneXSMaxLandscape) {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+
+  @include respond(galaxy-fold) {
+    max-width: 95%;
+  }
+
+  & > h5 {
+    font-size: 3rem;
+    color: $text;
+  }
+
+  & > p {
+    color: $grey;
+    font-size: 1.5rem;
+
+    @include respond(small-ipad) {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.featureRow {
+  background-color: #f2f5f7;
+  padding: 5rem 0;
+}
+
+.featureRow__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1366px;
+  margin: auto;
+
+  @include respond(ipad-pro) {
+    max-width: 95%;
+  }
+
+  @include respond(phone-landscape) {
+    flex-direction: column;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}

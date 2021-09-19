@@ -1,0 +1,67 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.cards {
+  min-height: 40vh;
+  background-color: #fff;
+
+  @include respond(laptop-medium) {
+    padding: 3rem 0;
+  }
+
+  @include respond(ipad-pro) {
+    padding: 2rem 0;
+  }
+
+  @include respond(small-ipad) {
+    padding: 3rem 0;
+  }
+}
+
+.cards__container {
+  min-height: 40vh;
+  max-width: 136.6rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include respond(laptop-medium) {
+    max-width: 90%;
+  }
+
+  & > h5 {
+    font-size: 2.2rem;
+    color: $red;
+    margin-bottom: 1rem;
+
+    @include respond(small-ipad) {
+      text-align: center;
+    }
+  }
+
+  & > h2 {
+    font-size: 2.5rem;
+    color: $text;
+    margin-bottom: 3rem;
+
+    @include respond(small-ipad) {
+      text-align: center;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.cards__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(iphoneXSMaxLandscape) {
+    flex-direction: column;
+  }
+
+  @include respond(small-ipad) {
+    flex-direction: column;
+  }
+}

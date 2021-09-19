@@ -1,0 +1,46 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.errorNotification {
+  position: absolute;
+  background-color: $red;
+  min-width: 22rem;
+  right: 42rem;
+  border-radius: 0.4rem;
+  padding: 1rem 1rem;
+  display: none;
+
+  @include respond(tablet) {
+    min-width: 15rem;
+  }
+
+  @include respond(phone-landscape) {
+    min-width: 14rem;
+  }
+
+  @include respond(phone) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  & > p {
+    color: #fff;
+    font-size: 1.3rem;
+
+    @include respond(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.errorNotification__arrow {
+  position: absolute;
+  font-size: 3rem !important;
+  color: $red;
+  right: -1.7rem;
+  top: 0.7rem;
+}
+
+.errorNotification__todo {
+  right: 33rem;
+}

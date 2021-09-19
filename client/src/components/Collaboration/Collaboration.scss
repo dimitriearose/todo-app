@@ -1,0 +1,52 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.collaboration {
+  background-color: #fff;
+}
+
+.collaboration__container {
+  border-top: 1px solid rgba($text, 0.2);
+  max-width: 136.6rem;
+  padding: 4rem 0;
+  margin: auto;
+
+  @include respond(ipad-pro) {
+    max-width: 95%;
+  }
+
+  & > h3 {
+    font-size: 3rem;
+    text-align: center;
+    color: $text;
+  }
+
+  & > p {
+    text-align: center;
+    color: $grey;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.collaboration__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(iphoneXSMaxLandscape) {
+    flex-direction: column;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  @include respond(iphone-5s) {
+    max-width: 90%;
+    margin: auto;
+  }
+}

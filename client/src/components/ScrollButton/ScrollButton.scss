@@ -1,0 +1,27 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.scrollButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  display: none;
+
+  @include respond(ipad-pro) {
+    display: none !important;
+  }
+
+  @include respond(iphoneXSMaxLandscape) {
+    display: none !important;
+  }
+}
+
+.scrollButton__icon {
+  font-size: 2.5rem !important;
+  color: #1c1e21;
+}
+
+.scrollButton__visible {
+  display: block;
+}

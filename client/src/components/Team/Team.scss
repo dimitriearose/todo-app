@@ -1,0 +1,54 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.team {
+  min-height: 30vh;
+  padding: 4rem 0;
+}
+
+.team__container {
+  max-width: 136.6rem;
+  margin: auto;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include respond(laptop-medium) {
+    max-width: 90%;
+  }
+
+  & > h5 {
+    font-size: 3rem;
+    text-align: center;
+    color: $red;
+    margin-bottom: 2rem;
+  }
+
+  & > p {
+    text-align: center;
+    font-size: 2rem;
+    color: $text;
+
+    @include respond(ipad-pro) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(tablet) {
+      font-size: 1.7rem;
+    }
+
+    @include respond(small-ipad) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.3rem;
+    }
+  }
+
+  & > p:first-of-type {
+    margin-bottom: 2rem;
+  }
+}

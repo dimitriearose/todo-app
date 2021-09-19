@@ -1,0 +1,26 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.plan {
+  @include respond(ipad-pro) {
+    padding: 1rem 0;
+  }
+}
+
+.plan__container {
+  padding: 4rem 0;
+  margin: auto;
+  max-width: 136.6rem;
+  border-top: 1px solid rgba($text, 0.3);
+
+  @include respond(ipad-pro) {
+    max-width: 95%;
+  }
+}
+
+.plan__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

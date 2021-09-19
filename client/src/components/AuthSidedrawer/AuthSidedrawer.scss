@@ -1,0 +1,44 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.authSidedrawer {
+  position: fixed;
+  height: 100vh;
+  width: 50rem;
+  background-color: #f2f5f7;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  transform: translateX(50rem);
+  transition: 0.5s ease-in-out;
+  padding: 4rem;
+  padding-top: 10rem;
+
+  @include respond(tablet) {
+    width: 40rem;
+  }
+
+  @include respond(phone) {
+    width: 30rem;
+  }
+
+  & > h4 {
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.authSidedrawer__open {
+  transform: translateX(0rem);
+}
+
+.authSidedrawer__hide {
+  @include respond(phone) {
+    display: none;
+  }
+}

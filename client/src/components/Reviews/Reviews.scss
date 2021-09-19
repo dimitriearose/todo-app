@@ -1,0 +1,161 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.review {
+  min-height: 40vh;
+  background-color: #edf2f7;
+
+  @include respond(iphoneXSMaxLandscape) {
+    padding: 2rem 0;
+  }
+
+  @include respond(iphone-5s) {
+    padding: 2rem 0;
+  }
+}
+
+.review__even {
+  background-color: #fff;
+}
+.review__container {
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+.review__avatar {
+  height: 8rem !important;
+  width: 8rem !important;
+  margin-bottom: 2rem;
+
+  @include respond(iphoneXSMaxLandscape) {
+    height: 6rem !important;
+    width: 6rem !important;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(phone) {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+
+  @include respond(small-phone) {
+    height: 4.5rem !important;
+    width: 4.5rem !important;
+    margin-bottom: 1rem;
+  }
+}
+
+.review__text {
+  position: relative;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.review__text__left__quotation {
+  position: absolute;
+  font-size: 2.5rem !important;
+  color: $red;
+  left: -2rem;
+  top: -1rem;
+
+  @include respond(tablet-medium-landscape) {
+    left: -4rem;
+  }
+
+  @include respond(ipad-pro) {
+    left: -3rem;
+  }
+
+  @include respond(tablet) {
+    left: -4rem;
+  }
+
+  @include respond(phone) {
+    left: -3rem;
+    font-size: 2rem !important;
+  }
+
+  @include respond(iphone-5s) {
+    font-size: 1.8rem;
+  }
+}
+
+.review__quote {
+  color: #1c1e21;
+  font-size: 2rem;
+
+  @include respond(laptop-medium) {
+    font-size: 1.9rem;
+  }
+
+  @include respond(iphoneXSMaxLandscape) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(small-ipad) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.3rem;
+  }
+
+  @include respond(small-phone) {
+    font-size: 1.2rem;
+  }
+
+  @include respond(iphone-5s) {
+    font-size: 1.1rem;
+  }
+}
+.review__text__right__quotation {
+  position: absolute;
+  font-size: 2.5rem !important;
+  color: $red;
+  right: 0;
+  bottom: -1rem;
+
+  @include respond(tablet) {
+    right: -2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem !important;
+  }
+  @include respond(iphone-5s) {
+    font-size: 1.8rem;
+  }
+}
+
+.review__name {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1c1e21;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(small-phone) {
+    font-size: 1.3rem;
+  }
+}
+
+.review__position {
+  font-size: 1.4rem;
+  color: $grey;
+}
+
+.review__text__left__quotation__story {
+  left: -3rem;
+}
+
+.review__text__right__quotation__story {
+  right: -2rem;
+  bottom: -0.5rem;
+}

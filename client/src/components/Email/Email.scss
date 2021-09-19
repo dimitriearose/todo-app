@@ -1,0 +1,161 @@
+@import '../../scss/_mixins';
+@import '../../scss/_variables';
+
+.email {
+  min-height: 40vh;
+  background-color: $red;
+
+  @include respond(ipad-pro) {
+    min-height: 30vh;
+  }
+
+  @include respond(iphoneXSMaxLandscape) {
+    padding: 3rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 2rem 0;
+  }
+}
+
+.email__container {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 136.6rem;
+  margin: auto;
+
+  @include respond(ipad-pro) {
+    min-height: 30vh;
+    max-width: 95%;
+  }
+
+  & > h3 {
+    color: #fff;
+    font-size: 5rem;
+
+    @include respond(laptop-medium) {
+      font-size: 4rem;
+    }
+
+    @include respond(small-ipad) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    @include respond(small-phone) {
+      font-size: 2rem;
+    }
+  }
+
+  & > p {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+    @include respond(laptop-medium) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(small-ipad) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    @include respond(iphone-5s) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.email__form__name {
+  display: flex;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.email__form {
+  @include respond(phone) {
+    width: 95%;
+  }
+
+  & > button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    font-size: 1.4rem;
+    font-family: inherit;
+    cursor: pointer;
+    color: #e4e6eb;
+    background-color: $red;
+    border: 2px solid #fff;
+    transition: 0.1s ease-in;
+
+    &:hover {
+      background-color: lighten($red, 10);
+    }
+
+    @include respond(phone) {
+      text-align: center;
+      margin: auto;
+    }
+  }
+}
+
+.email__form__name__field {
+  margin-right: 2rem;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  & > label {
+    display: block;
+    font-size: 1.2rem;
+    color: #e4e6eb;
+  }
+
+  & > input {
+    padding: 1.4rem 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include respond(small-ipad) {
+      padding: 1rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+  @include respond(phone) {
+    margin-bottom: 1rem;
+  }
+}
+
+.email__form__name__field:last-of-type {
+  margin-right: 0;
+
+  @include respond(phone) {
+    margin-bottom: 0;
+  }
+}

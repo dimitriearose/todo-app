@@ -1,0 +1,30 @@
+### Sign Up
+POST http://localhost:3001/user
+Content-Type: application/json
+
+{
+    "firstName":"Arthur",
+    "lastName":"Herald",
+    "email":"arthruherald@test.com",
+    "password":"arthurherald",
+}
+
+### Login via Email and Password
+
+POST http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+ "email":"geraldbennett@gmail.com" ,
+ "password" : "geraldtouchik"
+}
+
+### Login via Username and Password
+
+POST http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+ "username":"geraldtouchik" ,
+ "password":"geraldtouchik"
+}
